@@ -1,0 +1,33 @@
+spring:
+  datasource:
+#    initialization-mode: always
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/challenge
+    username: admin
+    password: admin
+#      continueOnError: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    password:
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type.descriptor.sql: trace
+
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"
+  version: "1.0.0"
+  show-login-endpoint: true
+security:
+  jwt:
+    secret: 4321

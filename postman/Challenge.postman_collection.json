@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "2ab50284-db5d-4b42-a718-c2e52b7bd874",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": \"user3\",\n    \"pass\": \"222222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/login",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDY3NzQzODEsImlzcyI6Ind3dy5jbWwuY2wiLCJzdWIiOiJ1c2VyMiIsImV4cCI6MTY0Njc3NDk4MX0.lTdipzOqu23pjNm1Xue84k5WxJ1r5MkR6LM1jIOYvBGu6PHHDk3Ofk2PwdknF7pH0s6gttLo4dGdjGTK4vj1Jw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/logout",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"user3\",\n    \"password\": \"222222\",\n    \"email\": \"mail3@mail.com\",\n    \"firstName\": \"name3\",\n    \"lastName\": \"lastname3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDY4ODYzNDksImlzcyI6Ind3dy5jbWwuY2wiLCJzdWIiOiJ1c2VyMyIsImV4cCI6MTY0Njg4Njk0OX0.dh_wZR1HRMy1muF6wW4DkcVyGV-s5YuSM91Qik-znfBGzUns_lfPGY5FZ0oLdwp-Zp0Sp3s8Q2vXbuOIUY0j_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/request-info/page?page=3&size=2",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"request-info",
+						"page"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sum number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE2NDY4ODYzNDksImlzcyI6Ind3dy5jbWwuY2wiLCJzdWIiOiJ1c2VyMyIsImV4cCI6MTY0Njg4Njk0OX0.dh_wZR1HRMy1muF6wW4DkcVyGV-s5YuSM91Qik-znfBGzUns_lfPGY5FZ0oLdwp-Zp0Sp3s8Q2vXbuOIUY0j_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/number/sum?firstNumber=3&secondNumber=3",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"number",
+						"sum"
+					],
+					"query": [
+						{
+							"key": "firstNumber",
+							"value": "3"
+						},
+						{
+							"key": "secondNumber",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "localhost"
+		},
+		{
+			"key": "port",
+			"value": "8080"
+		}
+	]
+}
